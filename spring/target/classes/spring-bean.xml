@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:ch="http://www.huhx.com/schema/ch"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:task="http://www.springframework.org/schema/task"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.1.xsd
+	        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd
+	        http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.0.xsd
+	   http://www.huhx.com/schema/ch
+        http://www.huhx.com/schema/ch.xsd">
+
+	<bean id="studens" class="com.liu.model.Studens">
+		<property name="id" value="1"></property>
+		<property name="name" value="强哥"></property>
+		<property name="address" value="大桥头"></property>
+
+	</bean>
+      <!--
+	<bean id="teacher" class="com.liu.model.Teacher">
+		<property name="name" value="发哥"></property>
+		<property name="st" ref="studens"></property>
+	</bean>
+ 
+	<bean id="doctor" class="com.liu.model.Doctor" parent="teacher">
+		<property name="name" value="发哥s"></property>
+		<property name="address" value="天安门"></property>
+	</bean>
+ -->
+
+	<ch:dateformat id="dateFormat" pattern="yyyy-MM-dd HH:mm"
+		lenient="true" />
+	 <annotation-driven></annotation-driven>
+	
+
+
+</beans>
